@@ -1,0 +1,27 @@
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <p class="shields">
+    <a href="https://travis-ci.org/io7m/bodyrecomp">
+      <img src="https://img.shields.io/travis/io7m/bodyrecomp.png?style=flat-square"
+           alt="Build status"/>
+    </a>
+    <a href="http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22com.io7m.bodyrecomp%22">
+      <img src="https://img.shields.io/maven-central/v/com.io7m.bodyrecomp/com.io7m.bodyrecomp.png?style=flat-square"
+           alt="Maven Central"/>
+    </a>
+    <a href="https://www.codacy.com/app/github_79/bodyrecomp">
+      <img src="https://img.shields.io/codacy/grade/046722ff3b2e4962ab093d5d77b84641.png?style=flat-square"
+           alt="Codacy"/>
+    </a>
+    <a href="https://codecov.io/gh/io7m/bodyrecomp">
+      <img src="https://img.shields.io/codecov/c/github/io7m/bodyrecomp.png?style=flat-square"
+           alt="Codecov"/>
+    </a>
+  </p>
+
+  <p>
+    The <tt>bodyrecomp</tt> package implements a set of tools and APIs for calculating nutritional targets
+    for body recomposition. It is based upon the excellent book <a href="https://jeffnippard.com/">Ultimate Guide To Body Recomposition</a>
+    by Jeff Nippard.
+  </p>
+
+</div>

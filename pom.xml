@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.io7m.primogenitor</groupId>
+    <artifactId>com.io7m.primogenitor.full</artifactId>
+    <version>5.0.0</version>
+  </parent>
+
+  <groupId>com.io7m.bodyrecomp</groupId>
+  <artifactId>com.io7m.bodyrecomp</artifactId>
+  <version>0.0.1</version>
+
+  <description>Tools for body recomposition</description>
+  <name>com.io7m.bodyrecomp</name>
+  <url>https://www.github.com/io7m/bodyrecomp</url>
+
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>com.io7m.bodyrecomp.core</module>
+    <module>com.io7m.bodyrecomp.tests</module>
+    <module>com.io7m.bodyrecomp.cmdline</module>
+    <module>com.io7m.bodyrecomp.strings.api</module>
+  </modules>
+
+  <properties>
+    <com.codacy.id>046722ff3b2e4962ab093d5d77b84641</com.codacy.id>
+    <com.io7m.xstructural.version>0.0.1-SNAPSHOT</com.io7m.xstructural.version>
+    <io7m.api.previousVersion>0.0.1-SNAPSHOT</io7m.api.previousVersion>
+    <io7m.java.requiredSDKBuildVersion>11,[14,15)</io7m.java.requiredSDKBuildVersion>
+    <io7m.java.targetJavaVersion>11</io7m.java.targetJavaVersion>
+    <junit.version>5.7.0-M1</junit.version>
+  </properties>
+
+  <licenses>
+    <license>
+      <name>ISC License</name>
+      <url>http://io7m.com/license/isc.txt</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/io7m/bodyrecomp</url>
+    <connection>scm:git:https://github.com/io7m/bodyrecomp</connection>
+    <developerConnection>scm:git:https://github.com/io7m/bodyrecomp</developerConnection>
+  </scm>
+
+  <developers>
+    <developer>
+      <id>io7m</id>
+      <name>io7m</name>
+      <email>code@io7m.com</email>
+      <url>http://io7m.com</url>
+    </developer>
+  </developers>
+
+  <issueManagement>
+    <url>http://github.com/io7m/bodyrecomp/issues</url>
+    <system>GitHub Issues</system>
+  </issueManagement>
+
+  <distributionManagement>
+    <site>
+      <id>io7m.com</id>
+      <name>io7m.com</name>
+      <url>https://www.io7m.com/software/bodyrecomp</url>
+    </site>
+    <repository>
+      <id>sonatype-nexus-staging</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+    </repository>
+  </distributionManagement>
+
+  <ciManagement>
+    <system>Travis CI</system>
+    <url>https://travis-ci.org/io7m/bodyrecomp</url>
+  </ciManagement>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.beust</groupId>
+        <artifactId>jcommander</artifactId>
+        <version>1.78</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.claypot</groupId>
+        <artifactId>com.io7m.claypot.core</artifactId>
+        <version>0.0.4</version>
+      </dependency>
+      <dependency>
+        <groupId>org.osgi</groupId>
+        <artifactId>org.osgi.annotation.bundle</artifactId>
+        <version>1.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.osgi</groupId>
+        <artifactId>org.osgi.annotation.versioning</artifactId>
+        <version>1.1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>com.github.siom79.japicmp</groupId>
+        <artifactId>japicmp</artifactId>
+        <version>0.14.3</version>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>2.0.0-alpha1</version>
+      </dependency>
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.3.0-alpha5</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.jaffirm</groupId>
+        <artifactId>com.io7m.jaffirm.core</artifactId>
+        <version>3.0.4</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.jranges</groupId>
+        <artifactId>com.io7m.jranges.core</artifactId>
+        <version>4.0.0</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.6</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>1.14</version>
+      </dependency>
+      <dependency>
+        <groupId>org.immutables</groupId>
+        <artifactId>value</artifactId>
+        <version>2.8.3</version>
+      </dependency>
+      <dependency>
+        <groupId>com.io7m.immutables.style</groupId>
+        <artifactId>com.io7m.immutables.style</artifactId>
+        <version>0.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>tech.units</groupId>
+        <artifactId>indriya</artifactId>
+        <version>2.0.3</version>
+      </dependency>
+      <dependency>
+        <groupId>systems.uom</groupId>
+        <artifactId>systems-common</artifactId>
+        <version>2.0.2</version>
+      </dependency>
+      <dependency>
+        <groupId>systems.uom</groupId>
+        <artifactId>systems-unicode</artifactId>
+        <version>2.0.2</version>
+      </dependency>
+      <dependency>
+        <groupId>systems.uom</groupId>
+        <artifactId>systems-quantity</artifactId>
+        <version>2.0.2</version>
+      </dependency>
+      <dependency>
+        <groupId>si.uom</groupId>
+        <artifactId>si-units</artifactId>
+        <version>2.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>javax.measure</groupId>
+        <artifactId>unit-api</artifactId>
+        <version>2.0</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+      <!-- Generate a site -->
+      <plugin>
+        <groupId>com.io7m.minisite</groupId>
+        <artifactId>com.io7m.minisite.maven_plugin</artifactId>
+        <inherited>false</inherited>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
