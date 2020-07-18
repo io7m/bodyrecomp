@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+
+<properties>
+  <entry key="explainBMR"><![CDATA[The first step is to calculate your basal metabolic rate.
+
+Your basal metabolic rate is the number of calories you would burn if
+you spent all day lying on the floor doing nothing.
+
+You specified an age of {0} years, your height is {1} meters, and your
+weight is {2} kilograms. You specified a biological gender of {3}.
+
+Using the Mifflin St. Jeor formula, your basal metabolic rate should
+be approximately {4} calories.
+
+------------------------------------------------------------------------
+]]></entry>
+
+  <entry key="explainMaintenance"><![CDATA[The next step is to calculate your maintenance calorie count.
+
+Your maintenance calorie count is the number of calories you require
+to stay at your current weight, assuming that you do no exercise, and
+that your level of daily non-exercise activity is {0}. This level of
+activity multiplies your basal metabolic rate by {1}.
+
+Based on the information given, your maintenance calorie count is
+approximately {2} calories.
+
+------------------------------------------------------------------------
+]]></entry>
+
+  <entry key="explainRecompCalories"><![CDATA[The next step is to calculate your target calorie count based on your goals.
+
+You specified that your body recomposition goal is {0}.
+
+Based on the information given, your body recomposition calorie count
+should be approximately {1} calories.
+
+------------------------------------------------------------------------
+]]></entry>
+
+  <entry key="explainMacros"><![CDATA[The last step is to work out what proportions of macronutrients you
+should eat within your calorie limit of {0} calories.
+
+Based on the information you specified about your body weight, gender,
+body fat percentage, etc, you should eat approximately {1} of protein
+per kilogram of body weight.
+
+This means you should dedicate {2} of your total calories to protein,
+which means eating {3}g of protein per day.
+
+In order to ensure that your body has sufficient fat intake (ideally
+saturated fats) to support muscle growth, you should dedicate {4} of
+your total calories to fat. This means eating {5}g of fat per day.
+
+Your remaining calories should be dedicated to carbohydrates. This
+means you should dedicate {6} calories to carbohydrates, which means
+eating {7} of carbohydrates per day.
+
+------------------------------------------------------------------------
+]]></entry>
+
+  <entry key="explainSummary"><![CDATA[Summary
+
+Total calories : {0}
+Protein        : {1} g
+Fat            : {2} g
+Carbohydrates  : {3} g
+
+You should recalculate these values every time your body weight
+changes by ~5kg, or your desired weight changes cease.
+
+------------------------------------------------------------------------
+]]></entry>
+
+  <entry key="surplus">increasing your body weight with a {0}% surplus</entry>
+  <entry key="deficit">decreasing your body weight with a {0}% surplus</entry>
+  <entry key="maintain">maintaining your body weight</entry>
+
+</properties>
