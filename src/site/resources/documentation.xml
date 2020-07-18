@@ -2,7 +2,33 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml">
   <h3>User documentation</h3>
-  <p>
+  <pre><![CDATA[
+$ bodyrecomp
+Usage: bodyrecomp [options] [command] [command options]
 
-  </p>
+  Options:
+    --verbose
+      Set the minimum logging verbosity level.
+      Default: info
+      Possible Values: [trace, debug, info, warn, error]
+
+  Use the "help" command to examine specific commands:
+
+    $ bodyrecomp help help.
+
+  Command-line arguments can be placed one per line into a file, and the file
+  can be referenced using the @ symbol:
+
+    $ echo help > file.txt
+    $ echo help >> file.txt
+    $ bodyrecomp @file.txt
+
+  Commands:
+    help        Show detailed help messages for commands.
+    macros      Calculate macronutrients.
+    version     Show the application version.
+
+  Documentation:
+    https://www.io7m.com/software/bodyrecomp/
+]]></pre>
 </div>

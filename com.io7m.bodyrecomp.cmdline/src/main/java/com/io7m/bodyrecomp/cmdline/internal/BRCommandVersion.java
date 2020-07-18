@@ -20,6 +20,8 @@ import com.beust.jcommander.Parameters;
 import com.io7m.claypot.core.CLPAbstractCommand;
 import com.io7m.claypot.core.CLPCommandContextType;
 
+import java.util.Properties;
+
 import static com.io7m.claypot.core.CLPCommandType.Status.SUCCESS;
 
 @Parameters(commandDescription = "Show the application version.")
@@ -41,6 +43,16 @@ public final class BRCommandVersion extends CLPAbstractCommand
   protected Status executeActual()
     throws Exception
   {
+    final var url =
+      BRCommandVersion.class.getResource(
+        "/com/io7m/bodyrecomp/cmdline/internal/version.properties"
+      );
+
+    try (var stream = url.openStream()) {
+      final var properties = new Properties();
+      properties.load(stream);
+      System.out.printf("bodyrecomp %s%n", properties.getProperty("version"));
+    }
     return SUCCESS;
   }
 
