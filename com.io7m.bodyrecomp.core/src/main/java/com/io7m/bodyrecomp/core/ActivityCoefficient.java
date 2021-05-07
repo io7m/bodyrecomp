@@ -56,6 +56,10 @@ public enum ActivityCoefficient
     this.coefficient = inCoefficient;
   }
 
+  /**
+   * @return The activity coefficient
+   */
+
   public double coefficient()
   {
     return this.coefficient;

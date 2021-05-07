@@ -27,17 +27,43 @@ import javax.measure.quantity.Mass;
 import javax.measure.quantity.Time;
 import java.util.Objects;
 
+/**
+ * Input to the Mifflin St. Jeor BMR estimation.
+ *
+ * @see "https://en.wikipedia.org/wiki/Basal_metabolic_rate#BMR_estimation_formulas"
+ */
+
 @ImmutablesStyleType
 @Value.Immutable
 public interface MifflinStJeorInputType
 {
+  /**
+   * @return The height of the body
+   */
+
   Quantity<Length> height();
+
+  /**
+   * @return The weight of the body
+   */
 
   Quantity<Mass> bodyWeight();
 
+  /**
+   * @return The age of the body
+   */
+
   Quantity<Time> age();
 
+  /**
+   * @return The biological gender of the body
+   */
+
   BiologicalGender gender();
+
+  /**
+   * Check preconditions for the type.
+   */
 
   @Value.Check
   default void checkPreconditions()

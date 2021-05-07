@@ -20,12 +20,24 @@ import com.io7m.immutables.styles.ImmutablesStyleType;
 import com.io7m.jaffirm.core.Preconditions;
 import org.immutables.value.Value;
 
+/**
+ * A normal coefficient in the range {@code [0, 1]}.
+ */
+
 @ImmutablesStyleType
 @Value.Immutable
 public interface NormalCoefficientType
 {
+  /**
+   * @return The coefficient value
+   */
+
   @Value.Parameter
   double value();
+
+  /**
+   * @return The coefficient value as a percentage
+   */
 
   @Value.Auxiliary
   @Value.Derived
@@ -33,6 +45,10 @@ public interface NormalCoefficientType
   {
     return this.value() * 100.0;
   }
+
+  /**
+   * Check preconditions for the type.
+   */
 
   @Value.Check
   default void checkPreconditions()

@@ -18,12 +18,24 @@ package com.io7m.bodyrecomp.core;
 
 import java.util.Objects;
 
+/**
+ * Functions over normal coefficients.
+ */
+
 public final class NormalCoefficients
 {
   private NormalCoefficients()
   {
 
   }
+
+  /**
+   * Determine the inverse of the normal coefficient.
+   *
+   * @param proportion The coefficient
+   *
+   * @return The inverse
+   */
 
   public static NormalCoefficient inverse(
     final NormalCoefficient proportion)

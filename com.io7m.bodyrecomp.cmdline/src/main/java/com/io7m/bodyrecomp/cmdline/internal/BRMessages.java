@@ -20,6 +20,10 @@ import com.io7m.bodyrecomp.strings.api.BRAbstractStrings;
 
 import java.util.ResourceBundle;
 
+/**
+ * String resources.
+ */
+
 public final class BRMessages extends BRAbstractStrings
 {
   private BRMessages(
@@ -27,6 +31,10 @@ public final class BRMessages extends BRAbstractStrings
   {
     super(inResources);
   }
+
+  /**
+   * @return The string resources
+   */
 
   public static BRMessages create()
   {

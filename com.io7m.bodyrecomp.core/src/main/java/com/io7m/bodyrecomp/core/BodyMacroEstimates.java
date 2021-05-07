@@ -27,12 +27,24 @@ import java.util.Objects;
 
 import static tech.units.indriya.unit.Units.GRAM;
 
+/**
+ * Functions to estimate macronutrients for a given body.
+ */
+
 public final class BodyMacroEstimates
 {
   private BodyMacroEstimates()
   {
 
   }
+
+  /**
+   * Estimate the macronutrients required for the given body.
+   *
+   * @param body The body
+   *
+   * @return The set of macronutrients
+   */
 
   public static BodyMacros estimateFor(
     final BodyDefinition body)

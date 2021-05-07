@@ -25,12 +25,26 @@ import java.util.Objects;
 
 import static systems.uom.common.CGS.CENTIMETRE;
 
+/**
+ * The Mifflin St. Jeor BMR estimation.
+ *
+ * @see "https://en.wikipedia.org/wiki/Basal_metabolic_rate#BMR_estimation_formulas"
+ */
+
 public final class MifflinStJeor
 {
   private MifflinStJeor()
   {
 
   }
+
+  /**
+   * Calculate the BMR for the given input.
+   *
+   * @param input The input
+   *
+   * @return The BMR
+   */
 
   public static Quantity<Energy> basalMetabolicRate(
     final MifflinStJeorInput input)

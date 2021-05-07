@@ -73,6 +73,10 @@ public enum CaloricAdjustment
       Objects.requireNonNull(inCoefficient, "coefficient");
   }
 
+  /**
+   * @return The caloric adjustment coefficient
+   */
+
   public GeneralCoefficient coefficient()
   {
     return this.coefficient;

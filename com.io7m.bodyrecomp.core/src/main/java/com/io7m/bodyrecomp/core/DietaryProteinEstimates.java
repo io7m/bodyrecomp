@@ -24,12 +24,24 @@ import javax.measure.Quantity;
 import javax.measure.quantity.Mass;
 import java.util.Objects;
 
+/**
+ * Functions to estimate dietary protein.
+ */
+
 public final class DietaryProteinEstimates
 {
   private DietaryProteinEstimates()
   {
 
   }
+
+  /**
+   * Estimate dietary protein for the given body.
+   *
+   * @param body The body
+   *
+   * @return The dietary protein estimate
+   */
 
   public static DietaryProteinEstimate estimateFor(
     final BodyDefinition body)

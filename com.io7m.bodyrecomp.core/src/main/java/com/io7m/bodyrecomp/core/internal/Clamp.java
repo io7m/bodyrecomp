@@ -16,12 +16,24 @@
 
 package com.io7m.bodyrecomp.core.internal;
 
+/**
+ * Functions to clamp values.
+ */
+
 public final class Clamp
 {
   private Clamp()
   {
 
   }
+
+  /**
+   * @param lower The lower bound
+   * @param upper The upper bound
+   * @param x     The input value
+   *
+   * @return {@code x} clamped to the range {@code [lower, upper]}
+   */
 
   public static double clamp(
     final double lower,

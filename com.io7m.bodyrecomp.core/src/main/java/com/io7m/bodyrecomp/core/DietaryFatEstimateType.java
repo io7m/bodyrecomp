@@ -19,9 +19,17 @@ package com.io7m.bodyrecomp.core;
 import com.io7m.immutables.styles.ImmutablesStyleType;
 import org.immutables.value.Value;
 
+/**
+ * An estimate of the required dietary fat.
+ */
+
 @ImmutablesStyleType
 @Value.Immutable
 public interface DietaryFatEstimateType
 {
+  /**
+   * @return An estimate of the required dietary fat.
+   */
+
   NormalCoefficient fatCoefficient();
 }

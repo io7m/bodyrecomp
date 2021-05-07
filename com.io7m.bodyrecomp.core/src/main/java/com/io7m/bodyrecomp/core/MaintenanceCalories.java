@@ -19,6 +19,10 @@ package com.io7m.bodyrecomp.core;
 import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 
+/**
+ * Functions to estimate the number of calories required to maintain a body weight.
+ */
+
 public final class MaintenanceCalories
 {
   private MaintenanceCalories()
@@ -26,12 +30,30 @@ public final class MaintenanceCalories
 
   }
 
+  /**
+   * Estimate calories for the given basal metabolic rate and activity coefficient.
+   *
+   * @param bmr      The basal metabolic rate
+   * @param activity The activity coefficient
+   *
+   * @return The calorie estimate
+   */
+
   public static Quantity<Energy> maintenanceEstimate(
     final Quantity<Energy> bmr,
     final ActivityCoefficient activity)
   {
     return maintenanceEstimate(bmr, activity.coefficient());
   }
+
+  /**
+   * Estimate calories for the given basal metabolic rate and activity coefficient.
+   *
+   * @param bmr      The basal metabolic rate
+   * @param activity The activity coefficient
+   *
+   * @return The calorie estimate
+   */
 
   public static Quantity<Energy> maintenanceEstimate(
     final Quantity<Energy> bmr,

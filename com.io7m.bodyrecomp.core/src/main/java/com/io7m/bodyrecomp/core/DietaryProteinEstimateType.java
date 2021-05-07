@@ -29,15 +29,35 @@ import java.util.Objects;
 
 import static tech.units.indriya.unit.Units.GRAM;
 
+/**
+ * An estimate of the required dietary protein.
+ */
+
 @ImmutablesStyleType
 @Value.Immutable
 public interface DietaryProteinEstimateType
 {
+  /**
+   * @return The number of grams of protein
+   */
+
   Quantity<Mass> proteinGrams();
+
+  /**
+   * @return The number of grams of protein per kilogram of body weight
+   */
 
   Quantity<Mass> gramsPerKilogram();
 
+  /**
+   * @return The number of grams of protein per pound of body weight
+   */
+
   Quantity<Mass> gramsPerPound();
+
+  /**
+   * @return The number of calories for the protein.
+   */
 
   @Value.Auxiliary
   @Value.Derived
@@ -48,6 +68,10 @@ public interface DietaryProteinEstimateType
       CLDR.FOODCALORIE
     );
   }
+
+  /**
+   * Check preconditions for the type.
+   */
 
   @Value.Check
   default void checkPreconditions()

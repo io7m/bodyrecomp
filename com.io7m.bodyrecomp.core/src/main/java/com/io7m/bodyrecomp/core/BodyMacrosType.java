@@ -27,19 +27,47 @@ import javax.measure.quantity.Energy;
 import javax.measure.quantity.Mass;
 import java.util.List;
 
+/**
+ * Macronutrients for a body, along with the reasons for the values.
+ */
+
 @ImmutablesStyleType
 @Value.Immutable
 public interface BodyMacrosType
 {
+  /**
+   * @return The list of explanations for the calculated values
+   */
+
   List<String> explanations();
+
+  /**
+   * @return The number of calories
+   */
 
   Quantity<Energy> calories();
 
+  /**
+   * @return The number of grams of protein
+   */
+
   Quantity<Mass> proteinGrams();
+
+  /**
+   * @return The number of grams of fat
+   */
 
   Quantity<Mass> fatGrams();
 
+  /**
+   * @return The number of grams of carbohydrates
+   */
+
   Quantity<Mass> carbohydrateGrams();
+
+  /**
+   * @return The number of calories for protein
+   */
 
   @Value.Derived
   @Value.Auxiliary
@@ -51,6 +79,10 @@ public interface BodyMacrosType
     );
   }
 
+  /**
+   * @return The number of calories for fat
+   */
+
   @Value.Derived
   @Value.Auxiliary
   default Quantity<Energy> fatCalories()
@@ -61,6 +93,10 @@ public interface BodyMacrosType
     );
   }
 
+  /**
+   * @return The number of calories for carbohydrates
+   */
+
   @Value.Derived
   @Value.Auxiliary
   default Quantity<Energy> carbohydrateCalories()
@@ -70,6 +106,10 @@ public interface BodyMacrosType
       CLDR.FOODCALORIE
     );
   }
+
+  /**
+   * Check preconditions for the type.
+   */
 
   @Value.Check
   default void checkPreconditions()

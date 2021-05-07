@@ -20,12 +20,24 @@ import com.io7m.bodyrecomp.core.internal.Clamp;
 
 import java.util.Objects;
 
+/**
+ * Functions to estimate dietary fat.
+ */
+
 public final class DietaryFatEstimates
 {
   private DietaryFatEstimates()
   {
 
   }
+
+  /**
+   * Estimate dietary fat for the given body.
+   *
+   * @param body The body
+   *
+   * @return The dietary fat estimate
+   */
 
   public static DietaryFatEstimate estimateFor(
     final BodyDefinition body)

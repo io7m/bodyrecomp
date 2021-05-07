@@ -34,6 +34,10 @@ import static tech.units.indriya.unit.Units.KILOGRAM;
 import static tech.units.indriya.unit.Units.METRE;
 import static tech.units.indriya.unit.Units.YEAR;
 
+/**
+ * The "macros" command.
+ */
+
 @Parameters(commandDescription = "Calculate macronutrients.")
 public final class BRCommandMacros extends CLPAbstractCommand
 {

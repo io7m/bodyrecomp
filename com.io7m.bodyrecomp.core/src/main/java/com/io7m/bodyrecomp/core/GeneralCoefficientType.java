@@ -20,12 +20,24 @@ import com.io7m.immutables.styles.ImmutablesStyleType;
 import com.io7m.jaffirm.core.Preconditions;
 import org.immutables.value.Value;
 
+/**
+ * A general coefficient in the range {@code [0, ∞]}.
+ */
+
 @ImmutablesStyleType
 @Value.Immutable
 public interface GeneralCoefficientType
 {
+  /**
+   * @return The coefficient value
+   */
+
   @Value.Parameter
   double value();
+
+  /**
+   * @return The coefficient value as a percentage
+   */
 
   @Value.Auxiliary
   @Value.Derived
@@ -34,6 +46,10 @@ public interface GeneralCoefficientType
     return this.value() * 100.0;
   }
 
+  /**
+   * Check preconditions for the type.
+   */
+
   @Value.Check
   default void checkPreconditions()
   {
@@ -41,7 +57,7 @@ public interface GeneralCoefficientType
     Preconditions.checkPreconditionD(
       value,
       value >= 0.0,
-      x -> "Value must be in the range [0, 1]"
+      x -> "Value must be in the range [0, ∞]"
     );
   }
 }

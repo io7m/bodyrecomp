@@ -30,27 +30,63 @@ import static tech.units.indriya.unit.Units.KILOGRAM;
 import static tech.units.indriya.unit.Units.METRE;
 import static tech.units.indriya.unit.Units.YEAR;
 
+/**
+ * The definition of a body.
+ */
+
 @Value.Immutable
 @ImmutablesStyleType
 public interface BodyDefinitionType
 {
+  /**
+   * @return The body's biological gender
+   */
+
   BiologicalGender gender();
+
+  /**
+   * @return The height of the body
+   */
 
   Quantity<Length> bodyHeight();
 
+  /**
+   * @return The weight of the body
+   */
+
   Quantity<Mass> bodyWeight();
+
+  /**
+   * @return The age of the body
+   */
 
   Quantity<Time> age();
 
+  /**
+   * @return The body fat coefficient
+   */
+
   NormalCoefficient bodyFatCoefficient();
 
+  /**
+   * @return The activity coefficient
+   */
+
   ActivityCoefficient activity();
+
+  /**
+   * @return The caloric adjustment coefficient
+   */
 
   @Value.Default
   default GeneralCoefficient caloricAdjustment()
   {
     return CaloricAdjustment.MAINTENANCE.coefficient();
   }
+
+  /**
+   * Check preconditions for the type.
+   */
 
   @Value.Check
   default void checkPreconditions()
@@ -69,12 +105,20 @@ public interface BodyDefinitionType
     );
   }
 
+  /**
+   * @return The body fat percentage
+   */
+
   @Value.Derived
   @Value.Auxiliary
   default double bodyFatPercentage()
   {
     return this.bodyFatCoefficient().asPercent();
   }
+
+  /**
+   * @return The lean mass coefficient (the inverse of the body fat coefficient)
+   */
 
   @Value.Derived
   @Value.Auxiliary
@@ -83,12 +127,20 @@ public interface BodyDefinitionType
     return NormalCoefficients.inverse(this.bodyFatCoefficient());
   }
 
+  /**
+   * @return The lean mass percentage
+   */
+
   @Value.Derived
   @Value.Auxiliary
   default double leanMassPercentage()
   {
     return this.leanMassCoefficient().asPercent();
   }
+
+  /**
+   * @return The weight of the body fat
+   */
 
   @Value.Derived
   @Value.Auxiliary
@@ -97,6 +149,10 @@ public interface BodyDefinitionType
     return this.bodyWeight()
       .multiply(Double.valueOf(this.bodyFatCoefficient().value()));
   }
+
+  /**
+   * @return The weight of the lean mass
+   */
 
   @Value.Derived
   @Value.Auxiliary
