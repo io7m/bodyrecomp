@@ -29,7 +29,7 @@ import com.io7m.claypot.core.CLPCommandContextType;
 import tech.units.indriya.quantity.Quantities;
 
 import static com.io7m.claypot.core.CLPCommandType.Status.SUCCESS;
-import static systems.uom.common.CGS.CENTIMETRE;
+import static systems.uom.common.historic.CGS.CENTIMETRE;
 import static tech.units.indriya.unit.Units.KILOGRAM;
 import static tech.units.indriya.unit.Units.METRE;
 import static tech.units.indriya.unit.Units.YEAR;

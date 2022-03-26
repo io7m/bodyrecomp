@@ -23,7 +23,7 @@ import javax.measure.Quantity;
 import javax.measure.quantity.Energy;
 import java.util.Objects;
 
-import static systems.uom.common.CGS.CENTIMETRE;
+import static systems.uom.common.historic.CGS.CENTIMETRE;
 
 /**
  * The Mifflin St. Jeor BMR estimation.
