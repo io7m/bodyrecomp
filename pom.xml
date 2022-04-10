@@ -15,7 +15,7 @@
 
   <description>Tools for body recomposition</description>
   <name>com.io7m.bodyrecomp</name>
-  <url>https://www.github.com/io7m/bodyrecomp</url>
+  <url>https://www.io7m.com/software/bodyrecomp</url>
 
   <packaging>pom</packaging>
 
@@ -27,7 +27,6 @@
   </modules>
 
   <properties>
-    <com.codacy.id>046722ff3b2e4962ab093d5d77b84641</com.codacy.id>
     <com.io7m.xstructural.version>0.0.4</com.io7m.xstructural.version>
     <io7m.api.previousVersion>0.0.2-SNAPSHOT</io7m.api.previousVersion>
     <junit.version>5.7.0</junit.version>
@@ -36,7 +35,7 @@
   <licenses>
     <license>
       <name>ISC License</name>
-      <url>http://io7m.com/license/isc.txt</url>
+      <url>https://www.io7m.com/license/isc.txt</url>
     </license>
   </licenses>
 
@@ -51,12 +50,12 @@
       <id>io7m</id>
       <name>io7m</name>
       <email>code@io7m.com</email>
-      <url>http://io7m.com</url>
+      <url>https://www.io7m.com</url>
     </developer>
   </developers>
 
   <issueManagement>
-    <url>http://github.com/io7m/bodyrecomp/issues</url>
+    <url>https://github.com/io7m/bodyrecomp/issues</url>
     <system>GitHub Issues</system>
   </issueManagement>
 
